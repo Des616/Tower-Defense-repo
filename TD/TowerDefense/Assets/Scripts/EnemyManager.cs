@@ -13,6 +13,7 @@ public class EnemyManager : MonoBehaviour
     public List<GameObject> allEnemies = new List<GameObject>();
 
     public GameObject[] EnemyWaves;
+    public GameObject targetDestination;
 
 
 
@@ -36,7 +37,7 @@ public class EnemyManager : MonoBehaviour
     public void SpawnNextWave(){
         if(CurrentWave < totalEnemyWaves){
             EnemyWave currentWave = EnemyWaves[CurrentWave].GetComponent<EnemyWave>();
-            StartCoroutine(currentWave.SpawnWave());
+            StartCoroutine(currentWave.SpawnWave(targetDestination));
             Debug.Log("Spawning wave: " + CurrentWave);
         }
         else{

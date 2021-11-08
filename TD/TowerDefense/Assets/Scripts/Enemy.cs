@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
         Destroy(gameObject);
         
     }
-
+//keeps hp bar oriented even if unit rotates
 public void UpdateHpBarOrientation(){
      Quaternion myCurrentTransform = transform.rotation;
      float myRot = myCurrentTransform.y;
