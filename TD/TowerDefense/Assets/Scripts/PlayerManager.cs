@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance= null;
     public int Gold = 0;
-    public int Life = 10;
+    public int Lives = 10;
 
     public int EnemiesKilled = 0;
 
@@ -25,8 +25,8 @@ public class PlayerManager : MonoBehaviour
         Gold += goldToAdd;
     }
 
-    public void AddLife(int Life){
-        Life += Life;
+    public void AddLives(int Life){
+        Lives += Life;
     }
 
     public void AddEnemyKilled(){
